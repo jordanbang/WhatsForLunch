@@ -1,5 +1,6 @@
 package com.jordanbang.whatsforlunch;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.ContentValues;
@@ -59,6 +60,7 @@ public class RestaurantDataSource {
 			rest.add(newRest);
 			cursor.moveToNext();
 		}
-		
+		cursor.close();
+		return rest;
 	}
 }
